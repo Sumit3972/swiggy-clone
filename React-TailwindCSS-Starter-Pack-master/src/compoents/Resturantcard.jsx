@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Resturantcard({item}) {
+  console.log(item.cta.link)
   return (
-  <>
+     <Link to = {`/resturantmeanu/${item?.cta?.link.split("/")[5]}`} >
     <div className="min-w-[275px] h-[182px] relative">
                        
                        <img className="w-full h-full rounded-s-2xl object-cover" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + item.info.cloudinaryImageId }  />
@@ -20,7 +22,8 @@ function Resturantcard({item}) {
                          <p className="line-clamp-1 text-black/60 font-medium">{item?.info?.cuisines.join(", ")}</p>
                          <p className="line-clamp-1 text-black/60 font-medium">{item?.info?.locality}</p>
                          </div>
-  </>
+
+  </Link>
   )
 }
 

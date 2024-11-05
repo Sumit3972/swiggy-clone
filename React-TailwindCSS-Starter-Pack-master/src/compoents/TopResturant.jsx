@@ -64,9 +64,9 @@ function TopRestaurant({data}) {
                 style={{ translate: `-${value}%` }}
             >
                 {
-                    data.map((item)=>(
+                    data.map((item )=>(
                         <div className="hover:scale-95 duration-300">
-                     <Resturantcard item = {item}/>
+                     <Resturantcard item = {item} link={item.cta?.link} />
                        </div>
                     
                     ))

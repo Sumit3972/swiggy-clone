@@ -14,6 +14,7 @@ function RestaurantComponent() {
       );
       const result = await response.json();
       setOnData(result?.data?.cards[0]?.card?.card?.imageGridCards?.info || []);
+      console.log(result?.data?.cards[0]?.card?.card?.imageGridCards?.info || []);
       SetTopRestaurantData(result?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
     } catch (error) {
       console.error("Error fetching data:", error);
