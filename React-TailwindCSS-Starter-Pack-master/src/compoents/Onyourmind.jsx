@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 
-function OnYourMind({data = []}) {
+function OnYourMind({ data = [] }) {
     // const [data, setData] = useState([]);
-   
-   // const [data,setData] = useState([])
+
+    // const [data,setData] = useState([])
     const [value, setValue] = useState(0);
 
-    
 
-     console.log(value);
+
+    console.log(value);
 
     function handleNext() {
         value >= 124 ? "" : setValue((prev) => prev + 31);
@@ -60,7 +60,7 @@ function OnYourMind({data = []}) {
             >
                 {data.map((item) => (
                     <img
-                    key={item.id}
+                        key={item.id}
                         className="w-40 "
                         src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/${item.imageId}`}
                         alt=""
@@ -68,7 +68,7 @@ function OnYourMind({data = []}) {
                 ))}
             </div>
 
-            <hr className="border"/>
+            <hr className="border" />
         </div>
     );
 }

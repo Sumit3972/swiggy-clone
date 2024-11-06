@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import Resturantcard from "./Resturantcard";
 
 
-function TopRestaurant({data}) {
-     console.log(data);
+function TopRestaurant({ data }) {
+    console.log(data);
     const [value, setValue] = useState(0);
-    
+
 
     // console.log(value);
 
@@ -17,7 +17,7 @@ function TopRestaurant({data}) {
         setValue((prev) => prev - 50);
     }
 
-    
+
 
     return (
         <div className="mt-14 w-full">
@@ -64,14 +64,15 @@ function TopRestaurant({data}) {
                 style={{ translate: `-${value}%` }}
             >
                 {
-                    data.map((item )=>(
+                    data.map((item) => (
                         <div className="hover:scale-95 duration-300">
-                     <Resturantcard item = {item} link={item.cta?.link} />
-                       </div>
-                    
+                            {console.log(item.cta)}
+                            <Resturantcard item={item} link={item.cta?.link} />
+                        </div>
+
                     ))
                 }
-            </div> 
+            </div>
 
             <hr className="border mt-10" />
         </div>
